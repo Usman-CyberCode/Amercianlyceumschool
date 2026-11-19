@@ -1,713 +1,780 @@
-
-/* =========================================
+ /* =========================================
    FUTURE OF LEARNING SECTION
 ========================================= */
 
-.future-learning {
-    position: relative;
-    padding: 115px 5%;
-    background: #F4F6F8;
-    overflow: hidden;
-}
+ .future-learning {
+     position: relative;
+     padding: 115px 5%;
+     background: #F4F6F8;
+     overflow: hidden;
+ }
 
-.future-learning .container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-}
+ .future-learning .container {
+     max-width: var(--container-width);
+     margin: 0 auto;
+ }
 
-/* =========================================
+ /* =========================================
    HEADER
 ========================================= */
 
-.learning-header {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: end;
-    gap: 60px;
-    margin-bottom: 48px;
-}
+ .learning-header {
+     display: grid;
+     grid-template-columns: 1.1fr 0.9fr;
+     align-items: end;
+     gap: 60px;
+     margin-bottom: 48px;
+ }
 
-.learning-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+ .learning-eyebrow {
+     display: flex;
+     align-items: center;
+     gap: 12px;
 
-    margin-bottom: 20px;
+     margin-bottom: 20px;
 
-    color: #B17A20;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-}
+     color: #B17A20;
+     font-size: 11px;
+     font-weight: 800;
+     letter-spacing: 2.5px;
+ }
 
-.eyebrow-line {
-    width: 35px;
-    height: 3px;
-    background: #E8A83E;
-}
+ .eyebrow-line {
+     width: 35px;
+     height: 3px;
+     background: #E8A83E;
+ }
 
-.learning-heading-left h2 {
-    max-width: 650px;
+ .learning-heading-left h2 {
+     max-width: 650px;
 
-    color: #102D60;
-    font-size: clamp(37px, 4.5vw, 58px);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -1.8px;
-}
+     color: #102D60;
+     font-size: clamp(37px, 4.5vw, 58px);
+     font-weight: 800;
+     line-height: 1.12;
+     letter-spacing: -1.8px;
+ }
 
-.learning-heading-left h2 span {
-    display: block;
-    color: #C68A25;
-}
+ .learning-heading-left h2 span {
+     display: block;
+     color: #C68A25;
+ }
 
-.learning-heading-right {
-    padding-bottom: 7px;
-    border-left: 3px solid #E8A83E;
-    padding-left: 25px;
-}
+ .learning-heading-right {
+     padding-bottom: 7px;
+     border-left: 3px solid #E8A83E;
+     padding-left: 25px;
+ }
 
-.learning-heading-right p {
-    color: #64748B;
-    font-size: 15px;
-    line-height: 1.9;
-}
+ .learning-heading-right p {
+     color: #64748B;
+     font-size: 15px;
+     line-height: 1.9;
+ }
 
-/* =========================================
+ /* =========================================
    MAIN IMAGE
 ========================================= */
 
-.learning-visual {
-    position: relative;
-    height: 570px;
+ .learning-visual {
+     position: relative;
+     height: 570px;
 
-    background: #102D60;
-    border-radius: 15px;
-    overflow: hidden;
+     background: #102D60;
+     border-radius: 15px;
+     overflow: hidden;
 
-    box-shadow: 0 25px 55px rgba(16, 45, 96, 0.16);
-}
+     box-shadow: 0 25px 55px rgba(16, 45, 96, 0.16);
+ }
 
-.learning-visual img {
-    position: absolute;
-    inset: 0;
+ .learning-visual img {
+     position: absolute;
+     inset: 0;
 
-    width: 100%;
-    height: 100%;
+     width: 100%;
+     height: 100%;
 
-    display: block;
-    object-fit: cover;
-    object-position: center 55%;
+     display: block;
+     object-fit: cover;
+     object-position: center 55%;
 
-    transition: transform 0.8s ease;
-}
+     transition: transform 0.8s ease;
+ }
 
-.learning-visual:hover img {
-    transform: scale(1.025);
-}
+ .learning-visual:hover img {
+     transform: scale(1.025);
+ }
 
-/* Image Overlay */
+ /* Image Overlay */
 
-.learning-image-overlay {
-    position: absolute;
-    inset: 0;
+ .learning-image-overlay {
+     position: absolute;
+     inset: 0;
 
-    background: linear-gradient(
-        90deg,
-        rgba(8, 24, 42, 0.92) 0%,
-        rgba(8, 24, 42, 0.70) 36%,
-        rgba(8, 24, 42, 0.15) 75%,
-        rgba(8, 24, 42, 0.08) 100%
-    );
-}
+     background: linear-gradient(90deg,
+             rgba(8, 24, 42, 0.92) 0%,
+             rgba(8, 24, 42, 0.70) 36%,
+             rgba(8, 24, 42, 0.15) 75%,
+             rgba(8, 24, 42, 0.08) 100%);
+ }
 
-/* =========================================
+ /* =========================================
    TOP LABEL
 ========================================= */
 
-.visual-top-label {
-    position: absolute;
-    top: 32px;
-    left: 35px;
+ .visual-top-label {
+     position: absolute;
+     top: 32px;
+     left: 35px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
 
-    padding: 11px 15px;
+     padding: 11px 15px;
 
-    color: #FFFFFF;
-    background: rgba(16, 45, 96, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 4px;
+     color: #FFFFFF;
+     background: rgba(16, 45, 96, 0.65);
+     border: 1px solid rgba(255, 255, 255, 0.22);
+     border-radius: 4px;
 
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+     font-size: 10px;
+     font-weight: 800;
+     letter-spacing: 1.5px;
 
-    backdrop-filter: blur(10px);
-}
+     backdrop-filter: blur(10px);
+ }
 
-.visual-dot {
-    width: 8px;
-    height: 8px;
-    background: #E8A83E;
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(232, 168, 62, 0.8);
-}
+ .visual-dot {
+     width: 8px;
+     height: 8px;
+     background: #E8A83E;
+     border-radius: 50%;
+     box-shadow: 0 0 12px rgba(232, 168, 62, 0.8);
+ }
 
-/* =========================================
+ /* =========================================
    IMAGE CONTENT
 ========================================= */
 
-.visual-content {
-    position: absolute;
-    left: 55px;
-    bottom: 100px;
+ .visual-content {
+     position: absolute;
+     left: 55px;
+     bottom: 100px;
 
-    max-width: 560px;
-}
+     max-width: 560px;
+ }
 
-.visual-kicker {
-    display: inline-block;
-    margin-bottom: 20px;
+ .visual-kicker {
+     display: inline-block;
+     margin-bottom: 20px;
 
-    color: #E8A83E;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-}
+     color: #E8A83E;
+     font-size: 11px;
+     font-weight: 800;
+     letter-spacing: 2.5px;
+ }
 
-.visual-content h3 {
-    color: #FFFFFF;
-    font-size: clamp(36px, 4.5vw, 56px);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -1.3px;
+ .visual-content h3 {
+     color: #FFFFFF;
+     font-size: clamp(36px, 4.5vw, 56px);
+     font-weight: 800;
+     line-height: 1.15;
+     letter-spacing: -1.3px;
 
-    margin-bottom: 18px;
-}
+     margin-bottom: 18px;
+ }
 
-.visual-content p {
-    max-width: 470px;
+ .visual-content p {
+     max-width: 470px;
 
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 15px;
-    line-height: 1.8;
-}
+     color: rgba(255, 255, 255, 0.84);
+     font-size: 15px;
+     line-height: 1.8;
+ }
 
-/* =========================================
+ /* =========================================
    FLOATING TAGS
 ========================================= */
 
-.visual-tags {
-    position: absolute;
-    top: 35px;
-    right: 35px;
+ .visual-tags {
+     position: absolute;
+     top: 35px;
+     right: 35px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-end;
+     gap: 10px;
 
-    max-width: 420px;
-}
+     max-width: 420px;
+ }
 
-.visual-tags span {
-    display: flex;
-    align-items: center;
-    gap: 9px;
+ .visual-tags span {
+     display: flex;
+     align-items: center;
+     gap: 9px;
 
-    padding: 12px 16px;
+     padding: 12px 16px;
 
-    color: #FFFFFF;
-    background: rgba(16, 45, 96, 0.77);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 5px;
+     color: #FFFFFF;
+     background: rgba(16, 45, 96, 0.77);
+     border: 1px solid rgba(255, 255, 255, 0.22);
+     border-radius: 5px;
 
-    font-size: 12px;
-    font-weight: 700;
+     font-size: 12px;
+     font-weight: 700;
 
-    backdrop-filter: blur(10px);
-}
+     backdrop-filter: blur(10px);
+ }
 
-.visual-tags i {
-    color: #E8A83E;
-    font-size: 14px;
-}
+ .visual-tags i {
+     color: #E8A83E;
+     font-size: 14px;
+ }
 
-/* =========================================
+ /* =========================================
    IMAGE INDEX
 ========================================= */
 
-.visual-index {
-    position: absolute;
-    left: 55px;
-    bottom: 35px;
+ .visual-index {
+     position: absolute;
+     left: 55px;
+     bottom: 35px;
 
-    display: flex;
-    align-items: center;
-    gap: 13px;
+     display: flex;
+     align-items: center;
+     gap: 13px;
 
-    color: #FFFFFF;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.7px;
-}
+     color: #FFFFFF;
+     font-size: 10px;
+     font-weight: 800;
+     letter-spacing: 1.7px;
+ }
 
-.visual-index span:first-child {
-    color: #E8A83E;
-    font-size: 18px;
-}
+ .visual-index span:first-child {
+     color: #E8A83E;
+     font-size: 18px;
+ }
 
-.visual-index div {
-    width: 50px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.55);
-}
+ .visual-index div {
+     width: 50px;
+     height: 1px;
+     background: rgba(255, 255, 255, 0.55);
+ }
 
-/* =========================================
+ /* =========================================
    PHILOSOPHY INTRO
 ========================================= */
 
-.learning-philosophy {
-    display: grid;
-    grid-template-columns: 1fr 0.85fr;
-    align-items: center;
-    gap: 70px;
+ .learning-philosophy {
+     display: grid;
+     grid-template-columns: 1fr 0.85fr;
+     align-items: center;
+     gap: 70px;
 
-    padding: 80px 0 48px;
-}
+     padding: 80px 0 48px;
+ }
 
-.philosophy-title > span {
-    display: block;
-    margin-bottom: 14px;
+ .philosophy-title>span {
+     display: block;
+     margin-bottom: 14px;
 
-    color: #B17A20;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.2px;
-}
+     color: #B17A20;
+     font-size: 11px;
+     font-weight: 800;
+     letter-spacing: 2.2px;
+ }
 
-.philosophy-title h3 {
-    max-width: 590px;
+ .philosophy-title h3 {
+     max-width: 590px;
 
-    color: #102D60;
-    font-size: clamp(28px, 3.2vw, 39px);
-    font-weight: 800;
-    line-height: 1.25;
-}
+     color: #102D60;
+     font-size: clamp(28px, 3.2vw, 39px);
+     font-weight: 800;
+     line-height: 1.25;
+ }
 
-.philosophy-title h3 span {
-    color: #C68A25;
-}
+ .philosophy-title h3 span {
+     color: #C68A25;
+ }
 
-.philosophy-description {
-    padding-left: 25px;
-    border-left: 2px solid #E8A83E;
-}
+ .philosophy-description {
+     padding-left: 25px;
+     border-left: 2px solid #E8A83E;
+ }
 
-.philosophy-description p {
-    color: #64748B;
-    font-size: 14px;
-    line-height: 1.95;
-}
+ .philosophy-description p {
+     color: #64748B;
+     font-size: 14px;
+     line-height: 1.95;
+ }
 
-/* =========================================
+ /* =========================================
    LEARNING PILLARS
 ========================================= */
 
-.learning-pillars {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 17px;
-}
+ .learning-pillars {
+     display: grid;
+     grid-template-columns: repeat(4, minmax(0, 1fr));
+     gap: 17px;
+ }
 
-.pillar-card {
-    position: relative;
+ .pillar-card {
+     position: relative;
 
-    min-height: 275px;
-    padding: 28px 23px;
+     min-height: 275px;
+     padding: 28px 23px;
 
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 9px;
+     background: #FFFFFF;
+     border: 1px solid #E2E8F0;
+     border-radius: 9px;
 
-    overflow: hidden;
-    transition: all 0.35s ease;
-}
+     overflow: hidden;
+     transition: all 0.35s ease;
+ }
 
-.pillar-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+ .pillar-card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
 
-    width: 0;
-    height: 3px;
+     width: 0;
+     height: 3px;
 
-    background: #E8A83E;
-    transition: width 0.4s ease;
-}
+     background: #E8A83E;
+     transition: width 0.4s ease;
+ }
 
-.pillar-card:hover::before {
-    width: 100%;
-}
+ .pillar-card:hover::before {
+     width: 100%;
+ }
 
-.pillar-card:hover {
-    transform: translateY(-8px);
+ .pillar-card:hover {
+     transform: translateY(-8px);
 
-    border-color: rgba(232, 168, 62, 0.65);
+     border-color: rgba(232, 168, 62, 0.65);
 
-    box-shadow: 0 17px 35px rgba(16, 45, 96, 0.09);
-}
+     box-shadow: 0 17px 35px rgba(16, 45, 96, 0.09);
+ }
 
-/* Card Number */
+ /* Card Number */
 
-.pillar-number {
-    position: absolute;
-    top: 18px;
-    right: 20px;
+ .pillar-number {
+     position: absolute;
+     top: 18px;
+     right: 20px;
 
-    color: #E9EDF3;
-    font-size: 35px;
-    font-weight: 900;
-}
+     color: #E9EDF3;
+     font-size: 35px;
+     font-weight: 900;
+ }
 
-/* Card Icon */
+ /* Card Icon */
 
-.pillar-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ .pillar-icon {
+     display: flex;
+     align-items: center;
+     justify-content: center;
 
-    width: 55px;
-    height: 55px;
-    margin-bottom: 25px;
+     width: 55px;
+     height: 55px;
+     margin-bottom: 25px;
 
-    color: #102D60;
-    background: #FFF1D5;
-    border-radius: 10px;
+     color: #102D60;
+     background: #FFF1D5;
+     border-radius: 10px;
 
-    font-size: 22px;
-    transition: all 0.35s ease;
-}
+     font-size: 22px;
+     transition: all 0.35s ease;
+ }
 
-.pillar-card:hover .pillar-icon {
-    color: #FFFFFF;
-    background: #102D60;
-    transform: rotate(-5deg);
-}
+ .pillar-card:hover .pillar-icon {
+     color: #FFFFFF;
+     background: #102D60;
+     transform: rotate(-5deg);
+ }
 
-/* Card Text */
+ /* Card Text */
 
-.pillar-card h4 {
-    color: #102D60;
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
+ .pillar-card h4 {
+     color: #102D60;
+     font-size: 20px;
+     font-weight: 800;
+     margin-bottom: 12px;
+ }
 
-.pillar-card p {
-    color: #718096;
-    font-size: 13px;
-    line-height: 1.85;
-}
+ .pillar-card p {
+     color: #718096;
+     font-size: 13px;
+     line-height: 1.85;
+ }
 
-/* Bottom Category */
+ /* Bottom Category */
 
-.pillar-bottom {
-    display: inline-block;
-    margin-top: 23px;
+ .pillar-bottom {
+     display: inline-block;
+     margin-top: 23px;
 
-    color: #B17A20;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+     color: #B17A20;
+     font-size: 9px;
+     font-weight: 800;
+     letter-spacing: 2px;
+ }
 
-/* =========================================
+ /* =========================================
    CLOSING STATEMENT
 ========================================= */
 
-.learning-footer {
-    position: relative;
+ .learning-footer {
+     position: relative;
 
-    display: flex;
-    align-items: center;
-    gap: 25px;
+     display: flex;
+     align-items: center;
+     gap: 25px;
 
-    margin-top: 65px;
-    padding: 35px 40px;
+     margin-top: 65px;
+     padding: 35px 40px;
 
-    background: #102D60;
-    border-radius: 9px;
-    overflow: hidden;
-}
+     background: #102D60;
+     border-radius: 9px;
+     overflow: hidden;
+ }
 
-.footer-accent {
-    flex-shrink: 0;
-    width: 4px;
-    height: 75px;
-    background: #E8A83E;
-}
+ .footer-accent {
+     flex-shrink: 0;
+     width: 4px;
+     height: 75px;
+     background: #E8A83E;
+ }
 
-.learning-footer > div:nth-child(2) {
-    position: relative;
-    z-index: 2;
-}
+ .learning-footer>div:nth-child(2) {
+     position: relative;
+     z-index: 2;
+ }
 
-.learning-footer > div:nth-child(2) span {
-    display: block;
-    margin-bottom: 12px;
+ .learning-footer>div:nth-child(2) span {
+     display: block;
+     margin-bottom: 12px;
 
-    color: #E8A83E;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+     color: #E8A83E;
+     font-size: 10px;
+     font-weight: 800;
+     letter-spacing: 2px;
+ }
 
-.learning-footer h3 {
-    max-width: 850px;
-    color: #FFFFFF;
+ .learning-footer h3 {
+     max-width: 850px;
+     color: #FFFFFF;
 
-    font-size: clamp(19px, 2.4vw, 27px);
-    font-weight: 700;
-    line-height: 1.5;
-}
+     font-size: clamp(19px, 2.4vw, 27px);
+     font-weight: 700;
+     line-height: 1.5;
+ }
 
-.learning-footer h3 strong {
-    color: #E8A83E;
-}
+ .learning-footer h3 strong {
+     color: #E8A83E;
+ }
 
-.footer-decoration {
-    position: absolute;
-    right: 40px;
+ .footer-decoration {
+     position: absolute;
+     right: 40px;
 
-    color: rgba(255, 255, 255, 0.08);
-    font-size: 100px;
-}
+     color: rgba(255, 255, 255, 0.08);
+     font-size: 100px;
+ }
 
-/* =========================================
+ /* =========================================
    TABLET RESPONSIVE
 ========================================= */
 
-@media (max-width: 1050px) {
+ @media (max-width: 1050px) {
 
-    .learning-header {
-        gap: 30px;
-    }
+     .learning-header {
+         gap: 30px;
+     }
 
-    .learning-visual {
-        height: 500px;
-    }
+     .learning-visual {
+         height: 500px;
+     }
 
-    .learning-pillars {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+     .learning-pillars {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+     }
 
-    .learning-philosophy {
-        gap: 35px;
-    }
-}
+     .learning-philosophy {
+         gap: 35px;
+     }
+ }
 
-/* =========================================
+ /* =========================================
    MOBILE RESPONSIVE
 ========================================= */
 
-@media (max-width: 650px) {
+ @media (max-width: 650px) {
 
-    .future-learning {
-        padding: 75px 5%;
-    }
+     .future-learning {
+         padding: 75px 5%;
+     }
 
-    .learning-header {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        margin-bottom: 35px;
-    }
+     .learning-header {
+         grid-template-columns: 1fr;
+         gap: 22px;
+         margin-bottom: 35px;
+     }
 
-    .learning-heading-left h2 {
-        font-size: 38px;
-    }
+     .learning-heading-left h2 {
+         font-size: 38px;
+     }
 
-    .learning-heading-right {
-        padding-left: 17px;
-    }
+     .learning-heading-right {
+         padding-left: 17px;
+     }
 
-    .learning-heading-right p {
-        font-size: 13px;
-    }
+     .learning-heading-right p {
+         font-size: 13px;
+     }
 
-    .learning-visual {
-        height: 470px;
-        border-radius: 10px;
-    }
+     .learning-visual {
+         height: 470px;
+         border-radius: 10px;
+     }
 
-    .learning-visual img {
-        object-position: 57% center;
-    }
+     .learning-visual img {
+         object-position: 57% center;
+     }
 
-    .learning-image-overlay {
-        background: linear-gradient(
-            0deg,
-            rgba(8, 24, 42, 0.96) 0%,
-            rgba(8, 24, 42, 0.65) 55%,
-            rgba(8, 24, 42, 0.12) 100%
-        );
-    }
+     .learning-image-overlay {
+         background: linear-gradient(0deg,
+                 rgba(8, 24, 42, 0.96) 0%,
+                 rgba(8, 24, 42, 0.65) 55%,
+                 rgba(8, 24, 42, 0.12) 100%);
+     }
 
-    .visual-top-label {
-        top: 18px;
-        left: 16px;
-        padding: 9px 11px;
-        font-size: 8px;
-    }
+     .visual-top-label {
+         top: 18px;
+         left: 16px;
+         padding: 9px 11px;
+         font-size: 8px;
+     }
 
-    .visual-tags {
-        top: 65px;
-        left: 16px;
-        right: 16px;
-        justify-content: flex-start;
-        gap: 7px;
-    }
+     .visual-tags {
+         top: 65px;
+         left: 16px;
+         right: 16px;
+         justify-content: flex-start;
+         gap: 7px;
+     }
 
-    .visual-tags span {
-        padding: 8px 10px;
-        font-size: 10px;
-    }
+     .visual-tags span {
+         padding: 8px 10px;
+         font-size: 10px;
+     }
 
-    .visual-content {
-        left: 22px;
-        right: 22px;
-        bottom: 95px;
-    }
+     .visual-content {
+         left: 22px;
+         right: 22px;
+         bottom: 95px;
+     }
 
-    .visual-content h3 {
-        font-size: 36px;
-    }
+     .visual-content h3 {
+         font-size: 36px;
+     }
 
-    .visual-content p {
-        font-size: 13px;
-    }
+     .visual-content p {
+         font-size: 13px;
+     }
 
-    .visual-index {
-        left: 22px;
-        bottom: 25px;
-    }
+     .visual-index {
+         left: 22px;
+         bottom: 25px;
+     }
 
-    .learning-philosophy {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 55px 0 35px;
-    }
+     .learning-philosophy {
+         grid-template-columns: 1fr;
+         gap: 22px;
+         padding: 55px 0 35px;
+     }
 
-    .philosophy-title h3 {
-        font-size: 30px;
-    }
+     .philosophy-title h3 {
+         font-size: 30px;
+     }
 
-    .philosophy-description {
-        padding-left: 18px;
-    }
+     .philosophy-description {
+         padding-left: 18px;
+     }
 
-    .learning-pillars {
-        grid-template-columns: 1fr;
-        gap: 13px;
-    }
+     .learning-pillars {
+         grid-template-columns: 1fr;
+         gap: 13px;
+     }
 
-    .pillar-card {
-        min-height: 235px;
-        padding: 25px 22px;
-    }
+     .pillar-card {
+         min-height: 235px;
+         padding: 25px 22px;
+     }
 
-    .learning-footer {
-        margin-top: 40px;
-        padding: 27px 20px;
-        gap: 15px;
-    }
+     .learning-footer {
+         margin-top: 40px;
+         padding: 27px 20px;
+         gap: 15px;
+     }
 
-    .footer-accent {
-        height: 90px;
-    }
+     .footer-accent {
+         height: 90px;
+     }
 
-    .learning-footer h3 {
-        font-size: 19px;
-    }
+     .learning-footer h3 {
+         font-size: 19px;
+     }
 
-    .footer-decoration {
-        right: 10px;
-        font-size: 65px;
-    }
-}
+     .footer-decoration {
+         right: 10px;
+         font-size: 65px;
+     }
+ }
 
-@media (max-width: 480px) {
-    .future-learning {
-        padding: 55px 4%;
-    }
+ @media (max-width: 480px) {
+     .future-learning {
+         padding: 55px 4%;
+     }
 
-    .learning-heading-left h2 {
-        font-size: clamp(26px, 7vw, 34px);
-    }
+     .learning-heading-left h2 {
+         font-size: clamp(26px, 7vw, 34px);
+     }
 
-    .learning-visual {
-        height: 400px;
-    }
+     .learning-visual {
+         height: 400px;
+     }
 
-    .visual-content {
-        left: 16px;
-        right: 16px;
-        bottom: 65px;
-    }
+     .visual-content {
+         left: 16px;
+         right: 16px;
+         bottom: 65px;
+     }
 
-    .visual-content h3 {
-        font-size: clamp(22px, 6vw, 28px);
-    }
+     .visual-content h3 {
+         font-size: clamp(22px, 6vw, 28px);
+     }
 
-    .visual-index {
-        left: 16px;
-        bottom: 20px;
-    }
+     .visual-index {
+         left: 16px;
+         bottom: 20px;
+     }
 
-    .philosophy-title h3 {
-        font-size: clamp(22px, 6vw, 28px);
-    }
+     .philosophy-title h3 {
+         font-size: clamp(22px, 6vw, 28px);
+     }
 
-    .pillar-card {
-        min-height: auto;
-        padding: 20px 18px;
-    }
+     .pillar-card {
+         min-height: auto;
+         padding: 20px 18px;
+     }
 
-    .learning-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 16px;
-        gap: 12px;
-    }
+     .learning-footer {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 20px 16px;
+         gap: 12px;
+     }
 
-    .footer-accent {
-        width: 45px;
-        height: 3px;
-    }
+     .footer-accent {
+         width: 45px;
+         height: 3px;
+     }
 
-    .footer-decoration {
-        display: none;
-    }
-}
+     .footer-decoration {
+         display: none;
+     }
+ }
 
-@media (max-width: 360px) {
-    .learning-visual {
-        height: 360px;
-    }
+ @media (max-width: 360px) {
+     .learning-visual {
+         height: 360px;
+     }
 
-    .visual-content {
-        bottom: 55px;
-    }
+     .visual-content {
+         bottom: 55px;
+     }
 
-    .visual-content h3 {
-        font-size: 20px;
-    }
+     .visual-content h3 {
+         font-size: 20px;
+     }
 
-    .pillar-card {
-        padding: 18px 14px;
-    }
-}
+     .pillar-card {
+         padding: 18px 14px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .future-learning {
+         padding: 55px 4%;
+     }
+
+     .learning-heading-left h2 {
+         font-size: clamp(26px, 7vw, 34px);
+     }
+
+     .learning-visual {
+         height: 400px;
+     }
+
+     .visual-content {
+         left: 16px;
+         right: 16px;
+         bottom: 65px;
+     }
+
+     .visual-content h3 {
+         font-size: clamp(22px, 6vw, 28px);
+     }
+
+     .visual-index {
+         left: 16px;
+         bottom: 20px;
+     }
+
+     .philosophy-title h3 {
+         font-size: clamp(22px, 6vw, 28px);
+     }
+
+     .pillar-card {
+         min-height: auto;
+         padding: 20px 18px;
+     }
+
+     .learning-footer {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 20px 16px;
+         gap: 12px;
+     }
+
+     .footer-accent {
+         width: 45px;
+         height: 3px;
+     }
+
+     .footer-decoration {
+         display: none;
+     }
+ }
+
+ @media (max-width: 360px) {
+     .learning-visual {
+         height: 360px;
+     }
+
+     .visual-content {
+         bottom: 55px;
+     }
+
+     .visual-content h3 {
+         font-size: 20px;
+     }
+
+     .pillar-card {
+         padding: 18px 14px;
+     }
+ }

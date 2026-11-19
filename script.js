@@ -1,6 +1,3 @@
-/* ==============================
-   HERO AUTOMATIC SLIDER
-============================== */
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".hero-slide");
     const dots = document.querySelectorAll(".slider-dot");
@@ -80,6 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && navDrawer && navDrawer.classList.contains("is-open")) {
+            closeDrawer();
+        }
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navDrawer && navDrawer.classList.contains("is-open")) {
+            closeDrawer();
+        }
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 991 && navDrawer && navDrawer.classList.contains("is-open")) {
             closeDrawer();
         }
     });

@@ -1,13 +1,8 @@
-/* ==============================
-   HERO AUTOMATIC SLIDER
-============================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const slides = document.querySelectorAll<HTMLElement>(
         ".hero-slide"
     );
-
     const dots = document.querySelectorAll<HTMLButtonElement>(
         ".slider-dot"
     );
@@ -64,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow = "hidden";
         }
     }
-
+    
     function closeDrawer(): void {
         if (navDrawer && navOverlay && navToggle) {
             navDrawer.classList.remove("is-open");
@@ -100,13 +95,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-
     document.addEventListener("keydown", (e: KeyboardEvent) => {
         if (e.key === "Escape" && navDrawer && navDrawer.classList.contains("is-open")) {
             closeDrawer();
         }
     });
-
+    document.addEventListener("keydown", (e: KeyboardEvent) => {
+        if (e.key === "Escape" && navDrawer && navDrawer.classList.contains("is-open")) {
+            closeDrawer();
+        }
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 991 && navDrawer && navDrawer.classList.contains("is-open")) {
+            closeDrawer();
+        }
+    });
     window.addEventListener("resize", () => {
         if (window.innerWidth > 991 && navDrawer && navDrawer.classList.contains("is-open")) {
             closeDrawer();
