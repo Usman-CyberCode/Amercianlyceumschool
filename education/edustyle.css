@@ -639,3 +639,75 @@
         font-size: 65px;
     }
 }
+
+@media (max-width: 480px) {
+    .future-learning {
+        padding: 55px 4%;
+    }
+
+    .learning-heading-left h2 {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+
+    .learning-visual {
+        height: 400px;
+    }
+
+    .visual-content {
+        left: 16px;
+        right: 16px;
+        bottom: 65px;
+    }
+
+    .visual-content h3 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+
+    .visual-index {
+        left: 16px;
+        bottom: 20px;
+    }
+
+    .philosophy-title h3 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+
+    .pillar-card {
+        min-height: auto;
+        padding: 20px 18px;
+    }
+
+    .learning-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+        gap: 12px;
+    }
+
+    .footer-accent {
+        width: 45px;
+        height: 3px;
+    }
+
+    .footer-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .learning-visual {
+        height: 360px;
+    }
+
+    .visual-content {
+        bottom: 55px;
+    }
+
+    .visual-content h3 {
+        font-size: 20px;
+    }
+
+    .pillar-card {
+        padding: 18px 14px;
+    }
+}

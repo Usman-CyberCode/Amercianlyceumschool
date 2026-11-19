@@ -324,13 +324,20 @@
     }
 }
 
+@media (max-width: 700px) {
+    .statistics-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
 @media (max-width: 480px) {
     .branch-finder-section {
         padding: 60px 5%;
     }
 
     .branch-finder-content h2 {
-        font-size: 35px;
+        font-size: clamp(26px, 7.5vw, 35px);
     }
 
     .branch-description {
@@ -348,10 +355,11 @@
     }
 
     .network-floating-label {
-        left: 0;
-        bottom: 12px;
+        left: 6px;
+        right: 6px;
+        bottom: 10px;
         gap: 9px;
-        padding: 10px;
+        padding: 10px 12px;
     }
 
     .network-label-icon {
@@ -369,6 +377,32 @@
     }
 
     .branch-bottom-note {
+        font-size: 10px;
+    }
+
+    .statistic-card {
+        min-height: 140px;
+        padding: 22px 18px;
+    }
+
+    .statistic-card h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .branch-finder-content h2 {
+        font-size: 24px;
+    }
+
+    .network-floating-label {
+        left: 4px;
+        right: 4px;
+        bottom: 6px;
+        padding: 8px 10px;
+    }
+
+    .network-floating-label strong {
         font-size: 10px;
     }
 }

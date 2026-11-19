@@ -7,6 +7,18 @@
     margin-inline: auto;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: min(100% - 40px, var(--container-width));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: min(100% - 28px, var(--container-width));
+    }
+}
+
 /* ==============================
    4. HEADER
 ============================== */
@@ -257,4 +269,352 @@
 .account-option:hover {
     background-color: var(--light-color);
     color: #D79627;
+}
+
+/* ==============================
+   10. MOBILE DRAWER ELEMENTS (DESKTOP DEFAULT)
+============================== */
+
+.drawer-header {
+    display: none;
+}
+
+.drawer-actions {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-overlay {
+    display: none;
+}
+
+/* ==============================
+   11. LAPTOP NAVIGATION (1024px - 1366px)
+   Maintain desktop layout with optimized sizing
+============================== */
+
+@media (max-width: 1366px) and (min-width: 992px) {
+    .header-container {
+        gap: 20px;
+    }
+
+    .brand-logo {
+        width: 250px;
+        height: 75px;
+    }
+
+    .nav-list {
+        gap: 24px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .header-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .account-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1150px) and (min-width: 992px) {
+    .header-container {
+        gap: 14px;
+    }
+
+    .brand-logo {
+        width: 210px;
+        height: 64px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .header-button {
+        padding: 10px 15px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .account-button {
+        padding: 8px 12px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .account-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* ==============================
+   12. TABLET & MOBILE NAVIGATION (<= 991px)
+   Left-side sliding drawer & hamburger menu
+============================== */
+
+@media (max-width: 991px) {
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .header-container {
+        min-height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Logo strictly on the left */
+    .brand {
+        margin-right: auto;
+        justify-self: start;
+    }
+
+    .brand-logo {
+        width: 200px;
+        height: auto;
+        max-height: 60px;
+    }
+
+    /* Hide desktop header actions on tablet/mobile */
+    .header-actions {
+        display: none;
+    }
+
+    /* Hamburger Toggle Button on the right */
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 9px;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+        margin-left: auto;
+    }
+
+    .nav-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.16);
+        border-color: var(--secondary-color);
+    }
+
+    .hamburger-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--white-color);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle.is-active .hamburger-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.is-active .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.is-active .hamburger-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Left-side Sliding Drawer */
+    .main-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(320px, 85vw);
+        height: 100vh;
+        height: 100dvh;
+        background-color: #102D70;
+        border-right: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.45);
+        z-index: 1001;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        padding: 24px 20px 32px;
+        visibility: hidden;
+    }
+
+    .main-navigation.is-open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    /* Drawer Header */
+    .drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .drawer-title {
+        color: var(--white-color);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .drawer-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        color: var(--white-color);
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .drawer-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+
+    /* Drawer Navigation Links */
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 14px;
+        font-size: 15px;
+        border-radius: 6px;
+        transition: all 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--secondary-color);
+    }
+
+    /* Drawer Actions */
+    .drawer-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: auto;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .drawer-apply-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 13px 20px;
+    }
+
+    .drawer-account {
+        width: 100%;
+    }
+
+    .drawer-account .account-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .drawer-account .account-menu {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        box-shadow: none;
+    }
+
+    /* Drawer Backdrop Overlay */
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(2px);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .nav-overlay.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        min-height: 66px;
+    }
+
+    .brand-logo {
+        width: 170px;
+        max-height: 50px;
+    }
+
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .hamburger-bar {
+        width: 20px;
+    }
+}
+
+@media (max-width: 340px) {
+    .brand-logo {
+        width: 145px;
+        max-height: 42px;
+    }
+
+    .header-container {
+        min-height: 60px;
+    }
 }

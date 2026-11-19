@@ -305,3 +305,23 @@
         font-size: 11px;
     }
 }
+
+@media (max-width: 360px) {
+    .main-footer {
+        padding: 45px 5% 0;
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+
+    .footer-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding: 18px 0;
+    }
+}

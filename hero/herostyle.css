@@ -332,12 +332,6 @@
 ============================== */
 
 @media (max-width: 992px) {
-.site-header{
-        height: 100px;
-        min-width: 992px;
-        overflow-block: visible;
-    }
-    
     .hero-section {
         height: 580px;
     }
@@ -359,17 +353,9 @@
             rgba(8, 28, 58, 0.55)
         );
     }
-
 }
 
 @media (max-width: 768px) {
-
-    .site-header{
-        height: 100px;
-        min-width: 768px;
-        
-    }
-    
     .hero-section {
         height: 550px;
         min-height: 500px;
@@ -408,33 +394,27 @@
     .slider-next {
         right: 12px;
     }
-
 }
 
 @media (max-width: 480px) {
-    .site-header{
-        height: 100px;
-        min-width: 480px;
-        overflow:auto;
-    }
-     
     .hero-section {
         height: 520px;
-        min-height: 480px;
+        min-height: 460px;
     }
 
     .hero-content {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     .hero-content h1 {
-        font-size: 34px;
+        font-size: clamp(26px, 7.5vw, 34px);
         line-height: 1.2;
     }
 
     .hero-content p {
         font-size: 14px;
+        line-height: 1.6;
     }
 
     .hero-buttons {
@@ -443,20 +423,57 @@
 
     .hero-primary-button,
     .hero-secondary-button {
-        padding: 13px 17px;
+        padding: 12px 18px;
         font-size: 13px;
     }
 
     .slider-arrow {
-        width: 34px;
-        height: 34px;
-        font-size: 13px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .slider-prev {
+        left: 8px;
+    }
+
+    .slider-next {
+        right: 8px;
     }
 
     .slider-dots {
-        bottom: 20px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 340px) {
+    .hero-section {
+        height: 490px;
+        min-height: 440px;
     }
 
+    .hero-content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-arrow {
+        display: none;
+    }
 }
 
 /* HERO MOTIVATIONAL QUOTE */

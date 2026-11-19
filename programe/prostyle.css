@@ -245,7 +245,7 @@
     }
 
     .programs-heading h2 {
-        font-size: 32px;
+        font-size: clamp(26px, 7vw, 32px);
     }
 
     .programs-heading p {
@@ -262,10 +262,39 @@
     }
 
     .program-content {
-        padding: 23px 22px 26px;
+        padding: 22px 20px 24px;
     }
 
     .program-content h3 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .programs-section {
+        padding: 55px 4%;
+    }
+
+    .programs-content {
+        padding: 18px 16px 22px;
+    }
+
+    .program-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .program-image {
+        height: 180px;
+    }
+
+    .program-content {
+        padding: 16px 14px 20px;
+    }
+
+    .program-link {
+        width: 100%;
+        justify-content: center;
     }
 }

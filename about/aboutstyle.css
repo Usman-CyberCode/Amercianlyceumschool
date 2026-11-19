@@ -216,6 +216,13 @@
     }
 }
 
+@media (max-width: 640px) {
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 480px) {
 
     .about-section {
@@ -229,6 +236,7 @@
     .about-image-label {
         bottom: 15px;
         padding: 13px 17px;
+        max-width: calc(100% - 20px);
     }
 
     .about-image-label strong {
@@ -236,7 +244,7 @@
     }
 
     .about-content h2 {
-        font-size: 29px;
+        font-size: clamp(24px, 6.5vw, 29px);
     }
 
     .about-description {
@@ -245,10 +253,34 @@
 
     .about-features {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 20px;
     }
 
     .about-feature h3 {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-image {
+        height: 250px;
+    }
+
+    .about-image-label {
+        bottom: 10px;
+        padding: 10px 13px;
+    }
+
+    .about-image-label span {
+        font-size: 11px;
+    }
+
+    .about-image-label strong {
+        font-size: 14px;
+    }
+
+    .about-link {
+        width: 100%;
+        justify-content: center;
     }
 }

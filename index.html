@@ -42,8 +42,17 @@
                 <img src="/Public/logo.png" alt="American Lyceum International School" class="brand-logo">
             </a>
 
-            <!-- Center Navigation -->
-            <nav class="main-navigation" aria-label="Main navigation">
+            <!-- Center Navigation (Sliding Drawer on Mobile/Tablet) -->
+            <nav class="main-navigation" id="mainNavigation" aria-label="Main navigation">
+
+                <!-- Drawer Header -->
+                <div class="drawer-header">
+                    <span class="drawer-title">Navigation</span>
+                    <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
                 <ul class="nav-list">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link active">About Us</a></li>
@@ -51,6 +60,47 @@
                     <li><a href="#approach" class="nav-link active">Our Approach</a></li>
                     <li><a href="#campuses" class="nav-link active">Campuses</a></li>
                 </ul>
+
+                <!-- Drawer Actions -->
+                <div class="drawer-actions">
+
+                    <a href="https://lyceumgroupofschools.com/" class="header-button drawer-apply-btn">
+                        Apply Now
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <!-- Account Dropdown -->
+                    <details class="account-dropdown drawer-account">
+
+                        <summary class="account-button">
+
+                            <span class="account-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="8" r="4"></circle>
+                                    <path d="M20 21a8 8 0 0 0-16 0"></path>
+                                </svg>
+                            </span>
+
+                            <span>My Account</span>
+                            <span class="dropdown-arrow"></span>
+                        </summary>
+
+                        <div class="account-menu">
+                            <a href="https://lyceumgroupofschools.com/" class="account-option">
+                                Sign Up
+                            </a>
+
+                            <a href="https://lyceumgroupofschools.com/" class="account-option">
+                                Login
+                            </a>
+                        </div>
+
+                    </details>
+
+                </div>
+
             </nav>
 
             <!-- Right Side Actions -->
@@ -93,7 +143,17 @@
 
             </div>
 
+            <!-- Hamburger Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavigation">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
         </div>
+
+        <!-- Backdrop Overlay for Mobile Drawer -->
+        <div class="nav-overlay" id="navOverlay"></div>
 
     </header>
 
@@ -788,6 +848,9 @@
 
                     </div>
 
+                </div>
+
+            </div>
 
         </section>
 
@@ -1084,7 +1147,7 @@
 
         </section>
 
-        <section class="branch-finder-section">
+        <section class="branch-finder-section" id="campuses">
             <div class="branch-finder-container">
 
                 <!-- Left Content -->

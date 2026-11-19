@@ -29,12 +29,22 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--white-color);
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
