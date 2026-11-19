@@ -1,0 +1,499 @@
+/* =========================================
+   IMPACT PREVIEW - PREMIUM DESIGN
+========================================= */
+
+.impact-preview {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    padding: 115px 5%;
+    overflow: hidden;
+    isolation: isolate;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(232, 168, 62, 0.12),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            #081D40 0%,
+            #102D60 55%,
+            #173C70 100%
+        );
+}
+
+/* Background Decoration */
+
+.impact-preview::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: -220px;
+    right: -100px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, 0.025),
+        0 0 0 90px rgba(255, 255, 255, 0.02);
+    z-index: -1;
+}
+
+.impact-preview::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: -180px;
+    left: -100px;
+    border: 1px solid rgba(232, 168, 62, 0.25);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+/* MAIN CONTAINER */
+
+.impact-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 85px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.impact-content {
+    display: block;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+
+.impact-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #E8A83E;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.impact-eyebrow::before {
+    content: "";
+    width: 38px;
+    height: 2px;
+    background: #E8A83E;
+}
+
+.impact-content h2 {
+    max-width: 650px;
+    color: #FFFFFF;
+    font-size: clamp(38px, 4.2vw, 60px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 0 0 25px;
+}
+
+.impact-content h2 span {
+    display: block;
+    color: #E8A83E;
+}
+
+.impact-description {
+    max-width: 580px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 15px;
+    line-height: 1.95;
+    margin-bottom: 38px;
+}
+
+
+/* HIGHLIGHT ITEMS */
+
+.impact-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 38px;
+}
+
+.impact-highlight {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    padding: 19px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition: all 0.35s ease;
+}
+
+.impact-highlight:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.impact-highlight:hover {
+    padding-left: 10px;
+}
+
+.highlight-number {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(232, 168, 62, 0.13);
+    border: 1px solid rgba(232, 168, 62, 0.35);
+    border-radius: 50%;
+
+    color: #E8A83E;
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.35s ease;
+}
+
+.impact-highlight:hover .highlight-number {
+    background: #E8A83E;
+    color: #102D60;
+    transform: rotate(8deg);
+}
+
+.impact-highlight h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.impact-highlight p {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* BUTTON */
+
+.impact-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 17px 27px;
+    overflow: hidden;
+
+    background: #E8A83E;
+    color: #102D60;
+    border: 1px solid #E8A83E;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+
+    transition: all 0.35s ease;
+}
+
+.impact-button:hover {
+    background: transparent;
+    color: #E8A83E;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.impact-button i {
+    transition: transform 0.3s ease;
+}
+
+.impact-button:hover i {
+    transform: translateX(6px);
+}
+
+
+/* =========================================
+   RIGHT IMAGE AREA
+========================================= */
+
+.impact-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 0 35px 35px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.impact-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 2;
+
+    background: #DCE5EF;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.35);
+}
+
+.impact-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.impact-image-wrapper:hover .impact-image {
+    transform: scale(1.07);
+}
+
+
+/* IMAGE OVERLAY */
+
+.impact-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(5, 22, 48, 0.85) 0%,
+        rgba(5, 22, 48, 0.15) 38%,
+        transparent 65%
+    );
+
+    pointer-events: none;
+}
+
+
+/* IMAGE CAPTION */
+
+.impact-image-caption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+    z-index: 3;
+
+    background: rgba(16, 45, 96, 0.86);
+    border-left: 3px solid #E8A83E;
+    backdrop-filter: blur(12px);
+}
+
+.caption-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #E8A83E;
+    color: #102D60;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.impact-image-caption span:not(.caption-icon) {
+    display: block;
+    color: #E8A83E;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.impact-image-caption h4 {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* DECORATIVE FRAME */
+
+.impact-image-decoration {
+    position: absolute;
+    width: 78%;
+    height: 78%;
+    right: 0;
+    bottom: 0;
+
+    border: 2px solid #E8A83E;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.impact-visual-label {
+    position: absolute;
+    top: 50%;
+    right: -55px;
+
+    transform: translateY(-50%) rotate(90deg);
+
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .impact-container {
+        gap: 45px;
+    }
+
+    .impact-image-wrapper {
+        height: 450px;
+    }
+
+    .impact-visual-label {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .impact-preview {
+        padding: 85px 6%;
+    }
+
+    .impact-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .impact-content h2 {
+        max-width: 650px;
+    }
+
+    .impact-description {
+        max-width: 650px;
+    }
+
+    .impact-visual {
+        width: 100%;
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .impact-image-wrapper {
+        height: 460px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .impact-preview {
+        padding: 65px 5%;
+    }
+
+    .impact-content h2 {
+        font-size: 36px;
+        letter-spacing: -1.2px;
+    }
+
+    .impact-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .impact-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .impact-highlight {
+        gap: 13px;
+        padding: 16px 0;
+    }
+
+    .highlight-number {
+        width: 39px;
+        height: 39px;
+        font-size: 10px;
+    }
+
+    .impact-highlight h4 {
+        font-size: 13px;
+    }
+
+    .impact-highlight p {
+        font-size: 11px;
+    }
+
+    .impact-button {
+        padding: 15px 19px;
+        font-size: 11px;
+    }
+
+    .impact-visual {
+        padding: 0 0 20px 15px;
+    }
+
+    .impact-image-wrapper {
+        height: 350px;
+    }
+
+    .impact-image-caption {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 13px;
+        gap: 11px;
+    }
+
+    .caption-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .impact-image-caption h4 {
+        font-size: 13px;
+    }
+
+    .impact-image-caption span:not(.caption-icon) {
+        font-size: 8px;
+    }
+}

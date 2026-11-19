@@ -1,0 +1,271 @@
+/* =================================
+   PROGRAMS SECTION
+================================= */
+
+.programs-section {
+    position: relative;
+    padding: 110px 5%;
+    background: linear-gradient(180deg, #F4F7FA 0%, #FFFFFF 100%);
+    overflow: hidden;
+}
+
+.programs-section::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 350px;
+    height: 350px;
+    background: rgba(232, 168, 62, 0.10);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.programs-section::after {
+    content: "";
+    position: absolute;
+    bottom: -180px;
+    left: -150px;
+    width: 350px;
+    height: 350px;
+    background: rgba(16, 45, 96, 0.07);
+    border-radius: 50%;
+}
+
+.programs-section .container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.programs-heading {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.programs-heading .section-subtitle {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 9px 20px;
+    background: rgba(232, 168, 62, 0.14);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.programs-heading h2 {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.programs-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted-color);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =================================
+   PROGRAMS GRID
+================================= */
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* =================================
+   PROGRAM CARD
+================================= */
+
+.program-card {
+    position: relative;
+    background: var(--white-color);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(16, 45, 96, 0.07);
+    box-shadow: 0 8px 25px rgba(16, 45, 96, 0.07);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(232, 168, 62, 0.55);
+    box-shadow: 0 22px 45px rgba(16, 45, 96, 0.15);
+}
+
+/* =================================
+   PROGRAM IMAGE
+================================= */
+
+.program-image {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: #DCE4EE;
+}
+
+.program-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(16, 45, 96, 0.65) 100%
+    );
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.program-card:hover .program-image img {
+    transform: scale(1.09);
+}
+
+.program-card:hover .program-image::after {
+    opacity: 1;
+}
+
+/* =================================
+   PROGRAM CONTENT
+================================= */
+
+.program-content {
+    position: relative;
+    padding: 28px 26px 30px;
+}
+
+.program-content h3 {
+    margin-bottom: 13px;
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.program-card:hover .program-content h3 {
+    color: #C68A25;
+}
+
+.program-content p {
+    margin-bottom: 23px;
+    color: var(--muted-color);
+    font-size: 14px;
+    line-height: 1.8;
+}
+.program-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 11px 22px;
+
+    color: var(--primary-color);
+    background: var(--secondary-color);
+
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.program-link::after {
+    content: "↗";
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.program-link:hover {
+    color: #FFFFFF;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 16px rgba(16, 45, 96, 0.16);
+    transform: translateY(-2px);
+}
+
+.program-link:hover::after {
+    transform: translate(3px, -3px);
+}
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1100px) {
+    .programs-section {
+        padding: 90px 4%;
+    }
+
+    .programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .program-image {
+        height: 230px;
+    }
+}
+
+@media (max-width: 650px) {
+    .programs-section {
+        padding: 70px 5%;
+    }
+
+    .programs-heading {
+        margin-bottom: 40px;
+    }
+
+    .programs-heading h2 {
+        font-size: 32px;
+    }
+
+    .programs-heading p {
+        font-size: 14px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .program-image {
+        height: 220px;
+    }
+
+    .program-content {
+        padding: 23px 22px 26px;
+    }
+
+    .program-content h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,51 @@
+/* ==============================
+   1. DESIGN SYSTEM
+============================== */
+
+:root {
+    --primary-color: #102D60;
+    --secondary-color: #E8A83E;
+
+    --text-color: #25364A;
+    --muted-color: #697789;
+
+    --white-color: #FFFFFF;
+    --light-color: #F4F7FA;
+
+    --font-family: 'DM Sans', sans-serif;
+
+    --container-width: 1700px;
+}
+
+/* ==============================
+   2. GLOBAL RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}

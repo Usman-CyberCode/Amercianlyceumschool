@@ -1,0 +1,600 @@
+
+/* =====================================
+   BRANCH FINDER SECTION
+===================================== */
+
+.branch-finder-section {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 110px 5%;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(232, 168, 62, 0.09),
+            transparent 28%
+        ),
+        linear-gradient(135deg, #f5f8fc 0%, #ffffff 55%, #eef3f9 100%);
+    overflow: hidden;
+}
+
+.branch-finder-container {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.branch-finder-content {
+    position: relative;
+    z-index: 2;
+}
+
+.branch-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: #b47a18;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.eyebrow-line {
+    width: 34px;
+    height: 3px;
+    background: #e8a83e;
+    border-radius: 10px;
+}
+
+.branch-finder-content h2 {
+    max-width: 570px;
+    margin: 0 0 24px;
+    color: #102d60;
+    font-family: var(--font-family);
+    font-size: clamp(38px, 4.2vw, 64px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2.5px;
+}
+
+.branch-finder-content h2 span {
+    display: block;
+    color: #d99a2d;
+}
+
+.branch-description {
+    max-width: 510px;
+    margin-bottom: 32px;
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+/* BUTTON */
+
+.branch-finder-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 17px 27px;
+    border: 1px solid #102d60;
+    border-radius: 6px;
+    background: #102d60;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.branch-finder-button i {
+    color: #e8a83e;
+    transition: transform 0.35s ease;
+}
+
+.branch-finder-button:hover {
+    background: #e8a83e;
+    border-color: #e8a83e;
+    color: #102d60;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(16, 45, 96, 0.17);
+}
+
+.branch-finder-button:hover i {
+    color: #102d60;
+    transform: translateX(6px);
+}
+
+/* BOTTOM NOTE */
+
+.branch-bottom-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 45px;
+    color: #718096;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.note-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(232, 168, 62, 0.16);
+    color: #b47a18;
+    font-size: 15px;
+}
+
+/* RIGHT IMAGE AREA */
+
+.branch-network-visual {
+    position: relative;
+    min-width: 0;
+    padding: 15px;
+}
+
+.network-image-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #dce5f1;
+    box-shadow:
+        0 25px 65px rgba(16, 45, 96, 0.16),
+        0 5px 15px rgba(16, 45, 96, 0.06);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.network-image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.branch-network-visual:hover .network-image-frame {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 75px rgba(16, 45, 96, 0.21);
+}
+
+.branch-network-visual:hover .network-image-frame img {
+    transform: scale(1.035);
+}
+
+/* FLOATING LABEL */
+
+.network-floating-label {
+    position: absolute;
+    left: -22px;
+    bottom: 42px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 15px 40px rgba(16, 45, 96, 0.13);
+    backdrop-filter: blur(12px);
+}
+
+.network-label-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #102d60;
+    color: #e8a83e;
+    font-size: 17px;
+}
+
+.network-floating-label strong,
+.network-floating-label span:last-child {
+    display: block;
+}
+
+.network-floating-label strong {
+    margin-bottom: 4px;
+    color: #102d60;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.network-floating-label div span {
+    color: #7b8798;
+    font-size: 10px;
+}
+
+/* DECORATIVE ELEMENTS */
+
+.network-decoration {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    border: 1px solid rgba(232, 168, 62, 0.65);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.network-decoration-one {
+    top: -12px;
+    right: -12px;
+    width: 95px;
+    height: 95px;
+}
+
+.network-decoration-two {
+    bottom: -18px;
+    left: 25%;
+    width: 45px;
+    height: 45px;
+    background: rgba(232, 168, 62, 0.12);
+    border: none;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1100px) {
+    .branch-finder-section {
+        padding: 85px 4%;
+    }
+
+    .branch-finder-container {
+        gap: 35px;
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .branch-finder-content h2 {
+        font-size: 45px;
+    }
+
+    .network-floating-label {
+        left: -10px;
+        bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .branch-finder-section {
+        padding: 75px 6%;
+    }
+
+    .branch-finder-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .branch-finder-content {
+        text-align: center;
+    }
+
+    .branch-eyebrow {
+        justify-content: center;
+    }
+
+    .branch-finder-content h2 {
+        max-width: 100%;
+        font-size: clamp(36px, 8vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .branch-description {
+        max-width: 580px;
+        margin: 0 auto 28px;
+        font-size: 14px;
+    }
+
+    .branch-bottom-note {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .branch-network-visual {
+        padding: 10px;
+    }
+
+    .network-floating-label {
+        left: 0;
+        bottom: 20px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .branch-finder-section {
+        padding: 60px 5%;
+    }
+
+    .branch-finder-content h2 {
+        font-size: 35px;
+    }
+
+    .branch-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .branch-finder-button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .network-image-frame {
+        border-radius: 15px;
+    }
+
+    .network-floating-label {
+        left: 0;
+        bottom: 12px;
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .network-label-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .network-floating-label strong {
+        font-size: 11px;
+    }
+
+    .network-floating-label div span {
+        font-size: 9px;
+    }
+
+    .branch-bottom-note {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================
+   SCHOOL STATISTICS
+========================================= */
+
+.school-statistics {
+    display: block;
+    width: 100%;
+    padding: 20px 5% 85px;
+    background: #ffffff;
+}
+
+.statistics-container {
+    max-width: 1390px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.statistic-card {
+    position: relative;
+    min-height: 190px;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background: #102D60;
+    border: 1px solid rgba(232, 168, 62, 0.15);
+
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+/* Card Decoration */
+
+.statistic-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -95px;
+    right: -65px;
+    border: 1px solid rgba(232, 168, 62, 0.3);
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.statistic-card::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    bottom: -75px;
+    left: -45px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.statistic-card:hover {
+    background: #173C70;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(16, 45, 96, 0.18);
+}
+
+.statistic-card:hover::before {
+    transform: scale(1.4);
+}
+
+/* ICON */
+
+.statistic-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E8A83E;
+    font-size: 30px;
+    margin-bottom: 13px;
+
+    transition: 0.35s ease;
+}
+
+.statistic-card:hover .statistic-icon {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.statistic-card h3 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 10px;
+}
+
+.statistic-card h3 span {
+    color: #E8A83E;
+}
+
+.statistic-card p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .branch-finder-container {
+        gap: 20px;
+    }
+
+    .branch-finder-content {
+        padding: 40px 30px;
+    }
+
+    .branch-map-area {
+        padding: 25px 5px;
+    }
+
+    .location-name {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .branch-finder-section {
+        padding: 55px 5% 35px;
+    }
+
+    .branch-finder-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .branch-finder-content {
+        min-height: 350px;
+    }
+
+    .branch-map-area {
+        min-height: 350px;
+    }
+
+    .branch-map-visual {
+        height: 270px;
+    }
+
+    .statistics-container {
+        gap: 15px;
+    }
+
+    .statistic-card {
+        min-height: 165px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .branch-finder-content {
+        min-height: 350px;
+        padding: 35px 25px;
+    }
+
+    .branch-finder-content h2 {
+        font-size: 39px;
+    }
+
+    .branch-finder-content p {
+        font-size: 12px;
+    }
+
+    .branch-map-heading h3 {
+        font-size: 18px;
+    }
+
+    .branch-map-visual {
+        height: 230px;
+    }
+
+    .location-pin {
+        width: 34px;
+        height: 34px;
+    }
+
+    .location-pin i {
+        font-size: 13px;
+    }
+
+    .location-name {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+
+    .statistics-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .statistic-card {
+        min-height: 145px;
+    }
+
+    .statistic-card h3 {
+        font-size: 32px;
+    }
+
+    .school-statistics {
+        padding-bottom: 55px;
+    }
+}

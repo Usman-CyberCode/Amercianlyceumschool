@@ -1,0 +1,492 @@
+
+/* ==============================
+   10. HERO SECTION
+============================== */
+
+.hero-section {
+    width: 100%;
+    height: 650px;
+    min-height: 550px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #102D60;
+}
+
+/* ==============================
+   11. HERO SLIDER
+============================== */
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/* Individual Slide */
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+/* Active Slide */
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    z-index: 2;
+}
+
+/* Hero Image */
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.05);
+
+    transition: transform 6s ease;
+}
+
+/* Image Zoom Animation */
+
+.hero-slide.active .hero-image {
+    transform: scale(1);
+}
+
+/* ==============================
+   12. HERO OVERLAY
+============================== */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(8, 28, 58, 0.88) 0%,
+        rgba(8, 28, 58, 0.68) 38%,
+        rgba(8, 28, 58, 0.20) 75%,
+        rgba(8, 28, 58, 0.05) 100%
+    );
+
+    z-index: 1;
+}
+
+/* ==============================
+   13. HERO CONTENT
+============================== */
+
+.hero-content {
+    height: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: var(--white-color);
+}
+
+/* Subtitle */
+
+.hero-subtitle {
+    display: inline-block;
+
+    margin-bottom: 22px;
+    padding: 9px 16px;
+
+    color: var(--secondary-color);
+
+    background-color: rgba(255, 255, 255, 0.10);
+
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 3px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Main Heading */
+
+.hero-content h1 {
+    max-width: 750px;
+
+    margin-bottom: 22px;
+
+    color: var(--white-color);
+
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: var(--secondary-color);
+}
+
+/* Description */
+
+.hero-content p {
+    max-width: 590px;
+
+    margin-bottom: 32px;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ==============================
+   14. HERO BUTTONS
+============================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+/* Primary Button */
+
+.hero-primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px 27px;
+
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 7px;
+
+    color: var(--primary-color);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.hero-primary-button:hover {
+    background-color: #D79627;
+    border-color: #D79627;
+
+    transform: translateY(-3px);
+}
+
+/* Secondary Button */
+
+.hero-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px 27px;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 7px;
+
+    color: var(--white-color);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.hero-secondary-button:hover {
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+
+    color: var(--primary-color);
+
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   15. SLIDER ARROWS
+============================== */
+
+.slider-arrow {
+    width: 48px;
+    height: 48px;
+
+    position: absolute;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    color: var(--white-color);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+
+    color: var(--primary-color);
+}
+
+.slider-prev {
+    left: 25px;
+}
+
+.slider-next {
+    right: 25px;
+}
+
+/* ==============================
+   16. SLIDER DOTS
+============================== */
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+.slider-dot {
+    width: 11px;
+    height: 11px;
+
+    padding: 0;
+
+    background-color: rgba(255, 255, 255, 0.55);
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    width: 32px;
+
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+/* ==============================
+   17. RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 992px) {
+.site-header{
+        height: 100px;
+        min-width: 992px;
+        overflow-block: visible;
+    }
+    
+    .hero-section {
+        height: 580px;
+    }
+
+    .hero-content h1 {
+        max-width: 650px;
+        font-size: 52px;
+    }
+
+    .hero-content p {
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(8, 28, 58, 0.88),
+            rgba(8, 28, 58, 0.55)
+        );
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .site-header{
+        height: 100px;
+        min-width: 768px;
+        
+    }
+    
+    .hero-section {
+        height: 550px;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .hero-content h1 {
+        max-width: 550px;
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        max-width: 450px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-prev {
+        left: 12px;
+    }
+
+    .slider-next {
+        right: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .site-header{
+        height: 100px;
+        min-width: 480px;
+        overflow:auto;
+    }
+     
+    .hero-section {
+        height: 520px;
+        min-height: 480px;
+    }
+
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        padding: 13px 17px;
+        font-size: 13px;
+    }
+
+    .slider-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .slider-dots {
+        bottom: 20px;
+    }
+
+}
+
+/* HERO MOTIVATIONAL QUOTE */
+
+.hero-quote {
+    max-width: 650px;
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.quote-line {
+    width: 4px;
+    flex-shrink: 0;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.hero-quote p {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .hero-quote p {
+        font-size: 15px;
+    }
+}
