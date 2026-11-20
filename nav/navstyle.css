@@ -59,7 +59,7 @@
 
     object-fit: contain;
     display: block;
-    
+
 }
 
 /* ==============================
@@ -252,7 +252,7 @@
 .account-option {
     display: block;
 
-    padding: 12px 14px;
+    padding: 12px 10px;
 
     color: var(--primary-color);
 
@@ -261,7 +261,7 @@
 
     border-radius: 6px;
     border: 1px solid black;
-        margin-bottom: 3px;
+    margin-bottom: 3px;
 
     transition: all 0.3s ease;
 }
