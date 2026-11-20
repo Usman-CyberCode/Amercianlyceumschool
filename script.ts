@@ -16,8 +16,7 @@
 //     setInterval(() => showSlide((currentSlide + 1) % slides.length), 2500);
 //     dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
 // }
-  
-const slides = document.querySelectorAll<HTMLImageElement>(".hero-slide");
+  const slides = document.querySelectorAll<HTMLImageElement>(".hero-slide");
 const dots = document.querySelectorAll<HTMLButtonElement>(".slider-dot");
 let currentSlide = 0;
 
@@ -30,17 +29,11 @@ function showSlide(index: number): void {
     dots[currentSlide]?.classList.add("active");
 }
 
-Promise.all(
-    [...slides].map(slide =>
-        slide.complete ? Promise.resolve() :
-        new Promise(resolve => {
-            slide.addEventListener("load", resolve, { once: true });
-            slide.addEventListener("error", resolve, { once: true });
-        })
-    )
-).then(() => {
+Promise.all([...slides].map(slide =>
+    slide.decode().catch(() => {})
+)).then(() => {
     if (slides.length > 1) {
-        setInterval(() => showSlide((currentSlide + 1) % slides.length), 1500);
+        setInterval(() => showSlide((currentSlide + 1) % slides.length), 4000);
     }
 });
 

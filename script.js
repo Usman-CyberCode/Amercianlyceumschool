@@ -23,13 +23,9 @@ function showSlide(index) {
     slides[currentSlide].classList.add("active");
     dots[currentSlide]?.classList.add("active");
 }
-Promise.all([...slides].map(slide => slide.complete ? Promise.resolve() :
-    new Promise(resolve => {
-        slide.addEventListener("load", resolve, { once: true });
-        slide.addEventListener("error", resolve, { once: true });
-    }))).then(() => {
+Promise.all([...slides].map(slide => slide.decode().catch(() => { }))).then(() => {
     if (slides.length > 1) {
-        setInterval(() => showSlide((currentSlide + 1) % slides.length), 1500);
+        setInterval(() => showSlide((currentSlide + 1) % slides.length), 4000);
     }
 });
 dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
