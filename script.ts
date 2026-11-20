@@ -1,22 +1,7 @@
-      /////////////////////   Hero Slider   ///////////////////
-// const slides = document.querySelectorAll<HTMLElement>(".hero-slide");
-// const dots = document.querySelectorAll<HTMLButtonElement>(".slider-dot");
-// let currentSlide = 0;
-
-// function showSlide(index: number): void {
-//     slides[currentSlide].classList.remove("active");
-//     dots[currentSlide]?.classList.remove("active");
-
-//     currentSlide = index;
-//     slides[currentSlide].classList.add("active");
-//     dots[currentSlide]?.classList.add("active");
-// }
-
-// if (slides.length > 1) {
-//     setInterval(() => showSlide((currentSlide + 1) % slides.length), 2500);
-//     dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
-// }
-  const slides = document.querySelectorAll<HTMLImageElement>(".hero-slide");
+  document.addEventListener("DOMContentLoaded", () => {
+    
+  /////////////////////   Hero Slider   ///////////////////
+const slides = document.querySelectorAll<HTMLElement>(".hero-slide");
 const dots = document.querySelectorAll<HTMLButtonElement>(".slider-dot");
 let currentSlide = 0;
 
@@ -29,17 +14,11 @@ function showSlide(index: number): void {
     dots[currentSlide]?.classList.add("active");
 }
 
-Promise.all([...slides].map(slide =>
-    slide.decode().catch(() => {})
-)).then(() => {
-    if (slides.length > 1) {
-        setInterval(() => showSlide((currentSlide + 1) % slides.length), 4000);
-    }
-});
-
-dots.forEach((dot, index) =>
-    dot.addEventListener("click", () => showSlide(index))
-);
+if (slides.length > 1) {
+    setInterval(() => showSlide((currentSlide + 1) % slides.length), 2500);
+    dots.forEach((dot, index) => dot.addEventListener("click", () => showSlide(index)));
+}
+  
    
    //////////////////    RESPONSIVE MOBILE NAVIGATION DRAWER       //////////////////
    
@@ -74,4 +53,5 @@ document.addEventListener("keydown", e => {
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > 991) toggleDrawer(false);
+});
 });
