@@ -1,4 +1,3 @@
-
 /* =====================================
    PROFESSIONAL FOOTER
 ===================================== */
@@ -69,7 +68,7 @@
     object-fit: contain;
 }
 
-.footer-brand > p {
+.footer-brand>p {
     margin-bottom: 25px;
     color: rgba(255, 255, 255, 0.68);
     font-size: 14px;
@@ -233,6 +232,26 @@
     background: #E8A83E;
 }
 
+.phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #102D70;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.phone-icon {
+    font-size: 22px;
+    font-style: normal;
+}
+
+.phone-link:hover {
+    color: #E8A83E;
+}
+
 /* =====================================
    RESPONSIVE DESIGN
 ===================================== */
@@ -296,7 +315,7 @@
         margin-bottom: 22px;
     }
 
-    .footer-brand > p {
+    .footer-brand>p {
         font-size: 13px;
     }
 
